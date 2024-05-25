@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --nv: #fff;
+    --bg: #cecece;
+    --primary: #008170;
+    --border: #dadada;
+    --menu: #5a5a5a;
+    --biobio: rgb(16, 16, 107);
+    --text: #000;
+    --font: "Open Sans", sans-serif;
+    --title: "Montserrat";
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    display: grid;
+    grid-template-areas: 
+        'nav nav nav'
+        'header aside'
+        'article article' 
+        'related related'
+        'footer footer'
+    ;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--text);
+}
+
+/*Primer menu*/
+.main-menu {
+    grid-template-areas: nav;
+    background: var(--nv);
+
+}
+.main-menu .menu-container .py-2{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 8rem;
+}
+
+.main-menu .menu-container .py-2 .py-3{
+    display:flex;
+    align-items: center;
+}
+
+.main-menu .menu-container .py-2 a {
+    display: flex;
+    align-items: center;
+    font-family: var(--title);
+    font-size: 2rem;
+    font-weight: 650;
+    text-decoration: none;
+    margin: 0.5rem 0;
+    color: var(--menu);
+}
+
+.main-menu .menu-container .py-2 .logo{
+    width: 170px;
+    margin-right: 0.1rem;
+}
+
+.main-menu .menu-container .py-2 .menu-button button{
+    border: none;
+    background: var(--nv);
+}
+
+.main-menu .menu-container .py-2 i {
+    font-size: 1.5rem;
+    color: var(--menu);
+    padding: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+/*Segundo menu*/
+.main-menu .nav-container .container .nav{
+    display: flex;
+    padding: 0rem 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-top: solid 1px var(--border);
+    border-bottom: solid 1px var(--border);
+    background: var(--nv);
+}
+
+.main-menu .nav-container .container .nav li{
+    padding: 1rem;
+    list-style: none;
+}
+
+.main-menu .nav-container .container .nav a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--biobio);
+    font-family: var(--font);
+}
