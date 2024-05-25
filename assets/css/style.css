@@ -3,12 +3,13 @@
 
 :root {
     --nv: #fff;
-    --bg: #cecece;
+    --bg: #f0f0f0;
     --primary: #008170;
-    --border: #dadada;
+    --border: #b1b1b1;
     --menu: #5a5a5a;
     --biobio: rgb(16, 16, 107);
     --text: #000;
+    --color-1: #00aeff;
     --font: "Open Sans", sans-serif;
     --title: "Montserrat";
 }
@@ -21,8 +22,9 @@
 
 #root {
     display: grid;
+    grid-template-columns:3fr 1.5fr;
     grid-template-areas: 
-        'nav nav nav'
+        'nav nav'
         'header aside'
         'article article' 
         'related related'
@@ -37,7 +39,7 @@ body {
 
 /*Primer menu*/
 .main-menu {
-    grid-template-areas: nav;
+    grid-area: nav;
     background: var(--nv);
 
 }
@@ -67,6 +69,7 @@ body {
 .main-menu .menu-container .py-2 .logo{
     width: 170px;
     margin-right: 0.1rem;
+    vertical-align: top;
 }
 
 .main-menu .menu-container .py-2 .menu-button button{
@@ -103,4 +106,92 @@ body {
     font-size: 0.9rem;
     color: var(--biobio);
     font-family: var(--font);
+}
+
+/*Construccion header*/
+
+.main-header {
+    grid-area: header;
+}
+
+.main-header .header-principal img{
+    width: 70%;
+    margin-left: 30%;
+    margin-top: 1rem;
+    vertical-align: top;
+}
+
+.main-header .header-principal h3 {
+    width: 70%;
+    margin-left: 31%;
+    text-align: start;
+    font-size: 1.9rem;
+    padding: 1rem;
+}
+
+.main-header .header-principal ul {
+    display: flex;
+    width: 65%;
+    margin-left: 35%;
+}
+
+.main-header .header-principal li {
+    margin-right: 2rem;
+    width: 90%;
+}
+
+/*Aside*/
+.aside-main {
+    grid-area: aside;
+}
+
+.aside-main .aside-imagen img{
+    width:70%;
+    margin: 1rem 1rem 0rem 1rem;
+    vertical-align: top;
+}
+
+.aside-main .aside-opinion{
+    width: 70%;
+    margin: 1rem;
+}
+
+.aside-main .aside-opinion img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.aside-main .aside-opinion .aside-articulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px var(--border);
+    background: var(--bg);
+    font-family: var(--font);
+}
+
+.aside-main .aside-opinion .aside-articulo .p-1 {
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-top: solid 2px var(--color-1);
+}
+
+.aside-main .aside-opinion .aside-articulo .p-2 {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-1);
+}
+
+.aside-main .aside-opinion .aside-articulo .p-3 {
+    padding-bottom: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--menu);
+}
+
+.aside-main .aside-opinion .aside-articulo .p-4 {
+    font-size: 1rem;
+    margin-bottom: 5rem;
 }
