@@ -149,6 +149,8 @@ body {
     width:70%;
     margin: 1rem 1rem 0rem 1rem;
     vertical-align: top;
+    object-fit: cover;
+    border-radius: 3%;
 }
 
 .aside-main .aside-opinion{
